@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+{% block content %}
+    <h2>Choose an Exercise</h2>
+    <h3>Bicep</h3>
+    <form method="post" action="{{ url_for('bicep_exercise_route') }}">
+        <label for="num_reps">Enter the number of reps:</label>
+        <input type="number" id="num_reps" name="num_reps" required>
+        <input type="submit" value="Start Exercise">
+    </form>
+
+    <h3>Pullup</h3>
+    <form method="post" action="{{ url_for('pullup_exercise_route') }}">
+        <label for="num_reps">Enter the number of reps:</label>
+        <input type="number" id="num_reps" name="num_reps" required>
+        <input type="submit" value="Start Exercise">
+    </form>
+
+    <h3>Jumping Jacks</h3>
+    <form method="post" action="{{ url_for('jumping_jack_exercise_route') }}">
+        <label for="num_reps">Enter the number of reps:</label>
+        <input type="number" id="num_reps" name="num_reps" required>
+        <input type="submit" value="Start Exercise">
+    </form>
+
+    <h3>Bench Press</h3>
+    <form method="post" action="{{ url_for('bench_press_exercise_route') }}">
+        <label for="num_reps">Enter the number of reps:</label>
+        <input type="number" id="num_reps" name="num_reps" required>
+        <input type="submit" value="Start Exercise">
+    </form>
+
+    <h3>PushUps</h3>
+    <form method="post" action="{{ url_for('pushup_exercise_route') }}">
+        <label for="num_reps">Enter the number of reps:</label>
+        <input type="number" id="num_reps" name="num_reps" required>
+        <input type="submit" value="Start Exercise">
+    </form>
+
+    <h3>Crunches</h3>
+    <form method="post" action="{{ url_for('crunches_exercise_route') }}">
+        <label for="num_reps">Enter the number of reps:</label>
+        <input type="number" id="num_reps" name="num_reps" required>
+        <input type="submit" value="Start Exercise">
+    </form>
+
+    <h3>Plank</h3>
+    <form method="post" action="{{ url_for('plank_exercise_route') }}">
+        <label for="num_reps">Enter the time in seconds:</label>
+        <input type="number" id="num_reps" name="num_reps" required>
+        <input type="submit" value="Start Exercise">
+    </form>
+
+    <h3>Leg Raise</h3>
+    <form method="post" action="{{ url_for('leg_raise_exercise_route') }}">
+        <label for="num_reps">Enter the number of reps:</label>
+        <input type="number" id="num_reps" name="num_reps" required>
+        <input type="submit" value="Start Exercise">
+    </form>
+
+    <h3>Lunges</h3>
+    <form method="post" action="{{ url_for('lunges_exercise_route') }}">
+        <label for="num_reps">Enter the number of reps:</label>
+        <input type="number" id="num_reps" name="num_reps" required>
+        <input type="submit" value="Start Exercise">
+    </form>
+
+    <h3>Knee Raises</h3>
+    <form method="post" action="{{ url_for('lunges_exercise_route') }}">
+        <label for="num_reps">Enter the number of reps:</label>
+        <input type="number" id="num_reps" name="num_reps" required>
+        <input type="submit" value="Start Exercise">
+    </form>
+
+    <h3>Squat</h3>
+    <form method="post" action="{{ url_for('squat_exercise_route') }}">
+        <label for="num_reps">Enter the number of reps:</label>
+        <input type="number" id="num_reps" name="num_reps" required>
+        <input type="submit" value="Start Exercise">
+    </form>
+
+    <h3>Lateral Raise</h3>
+    <form method="post" action="{{ url_for('lateral_raise_exercise_route') }}">
+        <label for="num_reps">Enter the number of reps:</label>
+        <input type="number" id="num_reps" name="num_reps" required>
+        <input type="submit" value="Start Exercise">
+    </form>
+
+    <h3>Shoulder Press</h3>
+    <form method="post" action="{{ url_for('shoulder_press_exercise_route') }}">
+        <label for="num_reps">Enter the number of reps:</label>
+        <input type="number" id="num_reps" name="num_reps" required>
+        <input type="submit" value="Start Exercise">
+    </form>
+{% endblock content %}

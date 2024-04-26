@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST" action="" enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Account Info</legend>
+                <div class="form-group">
+                    {{ form.username.label(class="form-control-label") }}
+
+                    {% if form.username.errors %}
+                        {{ form.username(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.username.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.username(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.email.label(class="form-control-label") }}
+                    {% if form.email.errors %}
+                        {{ form.email(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.email.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.email(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+            </fieldset>
+        </form>
+        {% if current_user.calculation_results.count() > 0 %}
+            <h3>Calculation Results</h3>
+            {% for result in current_user.calculation_results %}
+                <p>BMI: {{ result.bmi }}</p>
+                <p>BMR: {{ result.bmr }} calories per day</p>
+                <p>Ideal Body Weight Range: {{ result.ideal_weight - 10 }} kg to {{ result.ideal_weight + 10 }} kg</p>
+                <p>Estimated Body Fat Percentage: {{ result.body_fat_percentage }}%</p>
+                <p>Lean Body Mass: {{ result.lean_body_mass }} kg</p>
+                <p>Waist-to-Hip Ratio: {{ result.waist_to_hip_ratio }}</p>
+                <p>Waist-to-Height Ratio: {{ result.waist_to_height_ratio }}</p>
+                <h4>Nutrition Recommendations</h4>
+                <p>Recommended Daily Protein Intake: {{ result.protein_intake }} grams</p>
+                <p>Recommended Daily Calorie Intake: {{ result.calorie_intake }} calories</p>
+                <p>Recommended Daily Fat Intake: {{ result.fat_intake }} grams</p>
+                <p>Recommended Daily Carbohydrate Intake: {{ result.carbohydrate_intake }} grams</p>
+                <p>Recommended Daily Water Intake: {{ result.water_intake }} milliliters</p>
+                <p>Total Daily Energy Expenditure (TDEE): {{ result.tdee }} calories</p>
+                <hr>
+            {% endfor %}
+        {% endif %}
+    </div>
+{% endblock content %}
