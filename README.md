@@ -1,1 +1,1 @@
-Muscle mAtrix
+Muscle matrix
