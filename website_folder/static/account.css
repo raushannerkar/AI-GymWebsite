@@ -1,0 +1,30 @@
+.card-title{
+    color: #ce1212;
+}
+
+body{
+    background-color: #e5abab;
+}
+
+  .bold-label {
+    font-weight: bold;
+    display: block;
+  }
+
+  .card-spacer {
+    margin-right: 2rem;
+  }
+
+  .card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+    
+  }
+
+  .row {
+    max-width: 1300px; /* or any other desired width */
+    margin: 0 auto; /* to center the row horizontally */
+  }
+
+
+  /* e9ecef */

@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% block content %}
+<link rel="stylesheet" href="static/account.css">
+
+<br><br><br><br><br>
+<h2 class="text-center">Calculation Results</h2>
+<div class="row row-cols-1 row-cols-md-2 g-3 mb-3 justify-content-center mt-3">
+  
+    <div class="card col justify-content-center" style="width: 25rem;">
+        <div class="card-body">
+            <h5 class="card-title">Calculation Results</h5>
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <th scope="row">BMI:</th>
+                        <td>{{ bmi }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">BMR:</th>
+                        <td>{{ bmr }} calories per day</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ideal Body Weight Range:</th>
+                        <td>{{ ideal_weight - 10 }} kg to {{ ideal_weight + 10 }} kg</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Estimated Body Fat Percentage:</th>
+                        <td>{{ body_fat_percentage }}%</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Lean Body Mass:</th>
+                        <td>{{ lean_body_mass }} kg</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Waist-to-Hip Ratio:</th>
+                        <td>{{ waist_to_hip_ratio }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Waist-to-Height Ratio:</th>
+                        <td>{{ waist_to_height_ratio }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="card col ps-3" style="width: 25rem;">
+        <div class="card-body">
+            <h5 class="card-title">Nutrition Recommendations</h5>
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <th scope="row">Recommended Daily Protein Intake:</th>
+                        <td>{{ protein_intake }} grams</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Recommended Daily Calorie Intake:</th>
+                        <td>{{ calorie_intake }} calories</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Recommended Daily Fat Intake:</th>
+                        <td>{{ fat_intake }} grams</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Recommended Daily Carbohydrate Intake:</th>
+                        <td>{{ carbohydrate_intake }} grams</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Recommended Daily Water Intake:</th>
+                        <td>{{ water_intake }} milliliters</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Total Daily Energy Expenditure (TDEE):</th>
+                        <td>{{ tdee }} calories</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
