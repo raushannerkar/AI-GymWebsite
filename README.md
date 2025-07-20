@@ -6,10 +6,10 @@ the proliferation of mobile Internet and advancements in electronic information 
 integration of cloud computing, mobile Internet, Internet of Things (IoT), and artificial intelligence
 (AI) has become imperative. However, the current fitness landscape lacks a centralized digital space
 where individuals can access a wide range of health and fitness resources eciently. Existing systems
-su↵er from fragmentation, manual calculations, and limited personalized support, hindering users’
+s user from fragmentation, manual calculations, and limited personalized support, hindering users’
 ability to make informed decisions about their health and fitness routines. To address these challenges,
 Muscle Matrix o↵ers a user-friendly website with features such as a chatbot for personalized workout
 and diet recommendations, a BMI calculator, and interactive exercise guides. Leveraging technologies
 like OpenCV, MediaPipe, and TensorFlow, Muscle Matrix aims to provide a holistic solution for
-users to achieve their health and fitness goals e↵ectively. This project report outlines the objectives,
+users to achieve their health and fitness goals effectively. This project report outlines the objectives,
 functional requirements, limitations, and future enhancements of the Muscle Matrix platform.
